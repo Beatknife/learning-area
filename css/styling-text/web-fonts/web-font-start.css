@@ -1,9 +1,30 @@
+@font-face {
+  font-family: 'abril_fatfaceregular';
+  src: url('fonts1/abrilfatface-regular-webfont.woff2') format('woff2'),
+       url('fonts1/abrilfatface-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+
+
+@font-face {
+  font-family: '20_dbregular';
+  src: url('fonts1/20db-webfont.woff2') format('woff2'),
+       url('fonts1/20db-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
 /* General setup */
 
 html {
   font-size: 10px;
   margin: 0;
-  font-family: sans-serif;
+  font-family: "abril_fatfaceregular",sans-serif;
 }
 
 body {
@@ -16,6 +37,7 @@ body {
 
 h1 {
   font-size: 3.2rem;
+  font-family: "20_dbregular", sans-serif;
 }
 
 h2 {
