@@ -11,37 +11,40 @@
         padding: 1em;
         margin: 0;
       }
-
+      
       * {
         box-sizing: border-box;
       }
-
+      
       button,
       input,
       select {
         font-family: inherit;
         font-size: 100%;
-        padding: 0; margin: 0;
+        padding: 0;
+        margin: 0;
       }
-
+      
       fieldset {
         padding: 10px 30px 0;
         width: 400px;
       }
-
+      
       legend {
         color: white;
         background: black;
         padding: 5px 10px;
       }
-
+      
       fieldset > div {
         margin-bottom: 20px;
         display: flex;
         flex-flow: row wrap;
       }
-
-      button, label, input {
+      
+      button,
+      label,
+      input {
         display: block;
         font-family: inherit;
         font-size: 100%;
@@ -52,19 +55,55 @@
         padding: 5px;
         height: 30px;
       }
-
+      
       input {
         box-shadow: inset 1px 1px 3px #ccc;
         border-radius: 5px;
       }
-
-      input:hover, input:focus {
+      
+      input:hover,
+      input:focus {
         background-color: #eee;
       }
-
+      
       button {
         width: 60%;
         margin: 0 auto;
+      }
+      
+      input + span {
+        position: relative;
+      }
+      
+      input:required + span::after {
+        font-size: 0.7rem;
+        position: absolute;
+        content: "required";
+        color: white;
+        background-color: black;
+        padding: 5px 10px;
+        top: -26px;
+        left: -70px;
+      }
+      
+      input + span::before {
+        position: absolute;
+        right: -20px;
+        top: 5px;
+      }
+      
+      input:invalid {
+        border: 2px solid red;
+      }
+
+      input:invalid + span::before {
+        content: "✖";
+        color: red;
+      }
+      
+      input:valid + span::before {
+        content: "✓";
+        color: green;
       }
     </style>
   </head>
